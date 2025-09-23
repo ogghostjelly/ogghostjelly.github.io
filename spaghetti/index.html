@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spapeti</title>
+    <script src="assets/js/luxy.js.polyfills.min.js" charset="utf-8"></script>
+    <script src="assets/js/luxy.min.js" charset="utf-8"></script>
+
+    <style>
+        body {
+            background: repeating-linear-gradient(90deg, yellow 0%, darkred 3%, darkred 3%, yellow 5%);
+            background-size: 400% 400%;
+            animation: move-gradient 10s ease infinite;
+            height: 100vh;
+
+            color: red;
+            text-shadow: 2px 2px yellow;
+            transform: rotate(0.1deg);
+
+            font-size: 32px;
+        }
+
+        @keyframes move-gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            margin: 0;
+
+        }
+
+        h1:hover {
+            color: yellow;
+            text-shadow: 2px 2px red;
+            cursor: cell;
+        }
+
+        a {
+            font-weight: 900;
+            color: hotpink;
+            animation: none;
+        }
+
+        a:hover {
+            animation: anchor-gradient 1s ease infinite;
+        }
+
+        @keyframes anchor-gradient {
+            0% {
+                color: hotpink;
+            }
+
+            50% {
+                color: red;
+            }
+
+            100% {
+                color: hotpink;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="luxy" class="wrapper">
+        <h1>SPAGHETTTTTTTTTIIIIIIIIIIIIII</h1>
+        the long awaited <a href="https://ogghostjellyalt.github.io/spaghetti"
+            title="VIEW [SEQUEL] for ONLY [ONLY] one ONE click">[SEQUEL]</a>
+
+        I LOOOOOOOOOOOOOOOOOOOOOOVE SPAGHETTI (I STILL DO) thats why I am legally obligated to make this website!! AHAHA
+        THEYRE COMING FOR ME THEYRE COMING FOR ME SOMEBODY PL
+        I
+        LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVE
+        SPAGHETTI MY FAVOOOOURITE
+        <br><br>
+        WHAT IS YOUR YOUR SFAOVURITE SPAGHETTI NOODLES
+        <br>
+
+        <form>
+            <input type="checkbox" name="favourite-spaghetti-noodles">
+            <label>all of them</label><br>
+            <input type="checkbox" name="favourite-spaghetti-noodles">
+            <label>everyone of them</label><br>
+            <input type="checkbox" name="favourite-spaghetti-noodles">
+            <label>all the ones of them</label><br>
+            <input type="checkbox" name="favourite-spaghetti-noodles">
+            <label>them</label><br>
+            <input type="checkbox" name="favourite-spaghetti-noodles">
+            <label>spaghetti</label><br>
+        </form>
+    </div>
+    <script charset="utf-8">
+        luxy.init({
+            wrapperSpeed: 0.03,
+        })
+    </script>
+</body>
+
+</html>
