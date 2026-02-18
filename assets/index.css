@@ -1,3 +1,7 @@
+html {
+    cursor: url(cursor-closed.png), auto;
+}
+
 body {
     --bg-color: #050211;
     --fg-color: #B5C2B7;
@@ -34,6 +38,7 @@ a {
     display: inline-flex;
     color: var(--ternary-color);
     transition: color 0.2s;
+    cursor: url(cursor.png), auto;
 }
 
 a:hover {

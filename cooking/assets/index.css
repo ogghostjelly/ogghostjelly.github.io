@@ -1,3 +1,7 @@
+* {
+    cursor: url(cursor.png) 0 40, auto;
+}
+
 body {
     --bg-color: #fcd9b1;
     --fg-color: #321325;
