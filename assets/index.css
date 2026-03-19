@@ -1,5 +1,5 @@
 html {
-    cursor: url(cursor-closed.png), auto;
+    cursor: url(cursor.png), auto;
 }
 
 body {
@@ -24,6 +24,20 @@ body {
     background-position: center;
 }
 
+/* the internet told me it's ok to steal css effects as long as you don't get caught... */
+/* ok fine I stole it from https://gears.nekoweb.org/ don't arrest me (ywsac!) */
+.crt-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: 
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)),
+        radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%);
+    background-size: 100% 3px, 3px 100%, 100% 100%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
 h1 {
     text-shadow: 2px 2px var(--dark-fg-color);
 }
@@ -38,7 +52,7 @@ a {
     display: inline-flex;
     color: var(--ternary-color);
     transition: color 0.2s;
-    cursor: url(cursor.png), auto;
+    cursor: url(cursor-highlight.png), auto;
 }
 
 a:hover {
