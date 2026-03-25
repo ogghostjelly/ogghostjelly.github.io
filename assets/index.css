@@ -19,7 +19,7 @@ body {
     font-family: 'Lucida Console', 'Helvetica', 'Arial';
 
     background-color: var(--bg-color);
-    background-image: url("background.webp");
+    background-image: url("background.jpeg");
     background-repeat: repeat;
     background-position: center;
 }
