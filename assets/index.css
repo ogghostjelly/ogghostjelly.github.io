@@ -17,11 +17,7 @@ body {
     color: var(--fg-color);
     padding: 0 10px;
     font-family: 'Lucida Console', 'Helvetica', 'Arial';
-
     background-color: var(--bg-color);
-    background-image: url("background.jpeg");
-    background-repeat: repeat;
-    background-position: center;
 }
 
 /* the internet told me it's ok to steal css effects as long as you don't get caught... */
