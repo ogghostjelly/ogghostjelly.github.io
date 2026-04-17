@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ogghostjelly thoughts</title>
+    <link rel="stylesheet" href="../assets/index.css">
+
+    <meta name="theme-color" content="#551a8b">
+    <meta property="og:title" content="ogghostjelly's hangout">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="A website for all my HTML, CSS or JS based projects.">
+    <link rel="canonical" content="https://ogghostjelly.github.io/">
+    <meta property="og:url" content="https://ogghostjelly.github.io/">
+    <meta property="og:site_name" content="ogghostjelly's hangout">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="ogghostjelly's hangout">
+    <meta name="twitter:site" content="@OgGhostJelly">
+    <meta name="keywords" content="OgGhostJelly, OgGhostJelly Hangout">
+    <meta name="author" content="OgGhostJelly">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" href="../assets/favicon/favicon.ico">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+    <style>
+        body {
+            background-image: url("../assets/background.jpeg");
+            background-repeat: repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a title="what? too afraid of my dark deep evil fucked up mind? hehe well, *smirks* most ppl are hehe. im just a chill guy" href="..">go back</a>
+    </nav>
+    <br>
+    <header>
+        thoughts I have that I feel the need to externalize.
+    </header>
+    <main>
+        <ul id="ogj-thoughts">
+            Loading...
+        </ul>
+    </main>
+    <style>
+        ul {
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+            background-color: var(--bg-color);
+            border: 2px dotted var(--ternary-color);
+            padding: 8px;
+            margin: 0;
+            line-height: 1em;
+        }
+    </style>
+    <script>
+        (()=>{
+            function escapeHtml(txt) {
+                return txt.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
+            }
+
+            function replaceSurrounded(txt, delim, tag, escape=false) {
+                delim=delim.replaceAll("*", "\\*")
+                let regex = new RegExp(`(?<!\\\\)${delim}.*?${delim}`, "g")
+                return txt.replaceAll(regex, (x)=>`<${tag}>${escape ? escapeHtml(x.slice(1,-1)) : x.slice(1,-1)}</${tag}>`)
+            }
+
+            function markdownToHtml(txt) {
+                txt = replaceSurrounded(txt, '`', "code", true)
+                txt = replaceSurrounded(txt, '**', "strong")
+                txt = replaceSurrounded(txt, '*', "em")
+                txt = replaceSurrounded(txt, '_', "em")
+                return txt
+            }
+
+            let thoughts = document.getElementById("ogj-thoughts")
+            
+            fetch("thoughts.txt")
+                .then(res => res.text())
+                .then(txt => txt.split("\n\n").filter(x=>x.length))
+                .then(ls => {
+                    thoughts.firstChild.remove()
+                    ls.forEach(txt => {
+                        let thought = document.createElement("li")
+                        thought.innerHTML = markdownToHtml(txt)
+                        thoughts.appendChild(thought)
+                    })
+                })
+        })();
+    </script>
+    <footer>
+        thoughts are in <a href="thoughts.txt">a txt file</a> that I edit with <a href="ed.sh">a bash script</a>. the txt file uses \n\n to separate thoughts.
+    </footer>
+</body>

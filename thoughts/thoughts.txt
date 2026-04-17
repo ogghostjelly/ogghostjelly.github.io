@@ -1,0 +1,8 @@
+I like the idea of custom html elements.
+If everything is just html it's simple isn't it? How nice!
+I wish I could do `<red>to make text red</red>` or `<random>to pick a random word</random>`.
+And I could if I had custom elements.
+
+I may be using Rust errors wrong. TBF everyone else is too.
+
+Having to suffer through Rust errors will make you fall in love with try catch.
