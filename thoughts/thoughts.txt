@@ -1,3 +1,25 @@
+I love rain. I like outdoor boys. I love when it rains on the outdoor boys youtube channel.
+
+I don't like writing Javascript at all. It does not incite joy.
+Suffer boilerplate littered with `document.create*` and `textContent =`,
+or use a "reactive" web framework and feel icky because of added complexity and bloat.
+I'm glad people are trying HTML-like frameworks (e.g HTMX) that don't force you into data->ui state synchronization hell.
+A quote I like from [r7rs](https://r7rs.org),
+"Programming languages should be designed not by piling feature on top of feature, but by removing the weaknesses and restrictions that make additional features appear necessary."
+tl;dr js state management sucks and web frameworks are leaky abstractions.
+
+I hate when I read a blog post and it's wrong and out-dated, I think wow, this blog post is shit.
+When I keep reading and all the links don't work, I think wow, this writing is *shit*.
+Then I see that little em dash, and I think wow, this *person* is full of **shit**.
+Stop wasting my fucking time.
+I don't hate the technology inherently but if you use LLMs to write you better not appear in my search results or I hate you.
+I hate reading the writing style AI produces, even if you only use it to fix grammar issues, it infects everything.
+It's not just verbose—it's pandering and annoying.
+Ultimately the tools you use affect the way things are made, and AI affects things shit.
+Search engines should add AI disclosure and reporting of poor quality websites so I can make informed decisions about what I want to read.
+Personally, I would be embarrassed to put out garbage slop sites but I guess some people don't have enough of a conscience. >:(
+People in the before times had to put effort into pissing me off. It's somehow more infuriating that the pissing of me off is automated.
+
 I like the idea of custom html elements.
 If everything is just html it's simple isn't it? How nice!
 I wish I could do `<red>to make text red</red>` or `<random>to pick a random word</random>`.

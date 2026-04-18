@@ -495,8 +495,12 @@
 
             function replaceSurrounded(txt, delim, tag, escape=false) {
                 delim=delim.replaceAll("*", "\\*")
-                let regex = new RegExp(`(?<!\\\\)${delim}.*?${delim}`, "g")
+                let regex = new RegExp(`${delim}.*?${delim}`, "g")
                 return txt.replaceAll(regex, (x)=>`<${tag}>${escape ? escapeHtml(x.slice(1,-1)) : x.slice(1,-1)}</${tag}>`)
+            }
+
+            function replaceLinks(txt) {
+                return txt.replaceAll(/\[(.*?)\]\((.*?)\)/g, (_,text,href)=>`<a href="${href}">${text}</a>`)
             }
 
             function markdownToHtml(txt) {
@@ -504,6 +508,7 @@
                 txt = replaceSurrounded(txt, '**', "strong")
                 txt = replaceSurrounded(txt, '*', "em")
                 txt = replaceSurrounded(txt, '_', "em")
+                txt = replaceLinks(txt)
                 return txt
             }
 
